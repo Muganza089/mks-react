@@ -1,14 +1,63 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/mks-react/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mksengineering-react</title>
-    <script type="module" crossorigin src="/mks-react/assets/index-JhrZVpWK.js"></script>
-    <link rel="stylesheet" crossorigin href="/mks-react/assets/index-COcDBgFa.css">
+
+    <title>MKS Engineering</title>
+
+    <!-- Tailwind CDN (temporaire OK) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/mks-react/assets/index-DrFhwrWo.js"></script>
+    <link rel="stylesheet" crossorigin href="/mks-react/assets/index-DssJi08-.css">
   </head>
-  <body>
+
+  <body class="bg-background-light font-display">
+    <!-- React monte ici -->
     <div id="root"></div>
+
+    <!-- Tailwind config (CONSERVÉE) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0c213b",
+              "brand-gray": "#756e6e",
+              "brand-blue": "#0c213b",
+              "brand-green": "#10B981",
+              "brand-emerald": "#b1c3f1ff",
+              "footer-color": "#0c1724",
+            },
+            fontFamily: {
+              heading: ["Poppins", "ui-sans-serif"],
+              body: ["Quicksand", "ui-sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Entry React -->
   </body>
 </html>
