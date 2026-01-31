@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import computerImg from "@assets/images/computer.png";
-import weldingImg from "@assets/images/constructor.jpg";
-import cctvImg from "@assets/images/shield.jpg";
-import videoCameraImg from "@assets/images/video-camera.jpg";
-import sproutImg from "@assets/images/sprout.jpg";
-import fashionImg from "@assets/images/fashion.jpg";
+import computerImg from "@assets/icons/computer.png";
+import weldingImg from "@assets/icons/constructor.jpg";
+import cctvImg from "@assets/icons/shield.jpg";
+import videoCameraImg from "@assets/icons/video-camera.jpg";
+import sproutImg from "@assets/icons/sprout.jpg";
+import fashionImg from "@assets/icons/fashion.jpg";
 export default function Services() {
   return (
     <section className="bg-primary/5 py-16">
