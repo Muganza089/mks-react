@@ -96,7 +96,7 @@ export default function Soudure() {
       </section>
 
       {/* ================= FORMATION SOUDURE ================= */}
-      <section className="w-full bg-white py-24">
+      {/* <section className="w-full bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -127,7 +127,7 @@ export default function Soudure() {
 
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
