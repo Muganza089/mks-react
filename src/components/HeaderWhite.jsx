@@ -1,6 +1,11 @@
 import logo from "@assets/images/logo1.jpg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import phoneIcon from "@assets/icons/phone.png";
+import gmailIcon from "@assets/icons/gmail.png";
+import locationIcon from "@assets/icons/location.png";
+import facebookIcon from "@assets/icons/facebook.png";
+import tiktokIcon from "@assets/icons/tiktok.png";
 
 export default function HeaderWhite() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +49,7 @@ export default function HeaderWhite() {
                 {/* DROPDOWN */}
                 <ul className="absolute left-0 top-full w-64 bg-white text-gray-800 shadow-xl border border-black/10
                                opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <DropdownLink to="/welding-construction">Construction & Soudure</DropdownLink>
+                  <DropdownLink to="/welding_construction">Construction & Soudure</DropdownLink>
                   <DropdownLink to="/computer">Solutions informatiques</DropdownLink>
                   <DropdownLink to="/cctv">Gardiennage & CCTV</DropdownLink>
                 </ul>
@@ -111,7 +116,7 @@ export default function HeaderWhite() {
 
           {servicesOpen && (
             <div className="ml-4 space-y-1 text-sm font-medium">
-              <MobileLink to="/welding-construction" close={() => setMenuOpen(false)}>Construction & Soudure</MobileLink>
+              <MobileLink to="/welding_construction" close={() => setMenuOpen(false)}>Construction & Soudure</MobileLink>
               <MobileLink to="/computer" close={() => setMenuOpen(false)}>Solutions informatiques</MobileLink>
               <MobileLink to="/cctv" close={() => setMenuOpen(false)}>Gardiennage & CCTV</MobileLink>
             </div>
@@ -123,12 +128,12 @@ export default function HeaderWhite() {
 
         {/* CONTACTS BOTTOM */}
         <div className="px-6 py-6 border-t border-white/20 text-white text-sm space-y-3">
-          <ContactItem icon="phone" text="+243 972 717 272" />
-          <ContactItem icon="gmail" text="support@mksengineering.net" />
-          <ContactItem icon="location" text="Kolwezi – RDC" />
+          <ContactItem icon={phoneIcon} text="+243 972 717 272" />
+          <ContactItem icon={gmailIcon} text="support@mksengineering.net" />
+          <ContactItem icon={locationIcon}   text="Kolwezi – RDC" />
           <div className="flex gap-4 pt-2">
-            <img src="/icons/facebook.png" className="w-5 h-5 invert" />
-            <img src="/icons/tiktok.png" className="w-5 h-5 invert" />
+            <img src={facebookIcon} className="w-5 h-5 invert" />
+            <img src={tiktokIcon} className="w-5 h-5 invert" />
           </div>
         </div>
       </aside>

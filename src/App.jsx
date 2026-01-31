@@ -28,7 +28,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/computer" element={<Informatique />} />
           <Route path="/cctv" element={<CCTV />} />
-          <Route path="/welding-construction" element={<Soudure />} />
+          <Route path="/welding_construction" element={<Soudure />} />
         </Routes>
       </main>
 
