@@ -49,7 +49,7 @@ export default function HeaderWhite() {
                 {/* DROPDOWN */}
                 <ul className="absolute left-0 top-full w-64 bg-white text-gray-800 shadow-xl border border-black/10
                                opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <DropdownLink to="/welding_construction">Construction & Soudure</DropdownLink>
+                  <DropdownLink to="/welding-construction">Construction & Soudure</DropdownLink>
                   <DropdownLink to="/computer">Solutions informatiques</DropdownLink>
                   <DropdownLink to="/cctv">Gardiennage & CCTV</DropdownLink>
                 </ul>
@@ -116,7 +116,7 @@ export default function HeaderWhite() {
 
           {servicesOpen && (
             <div className="ml-4 space-y-1 text-sm font-medium">
-              <MobileLink to="/welding_construction" close={() => setMenuOpen(false)}>Construction & Soudure</MobileLink>
+              <MobileLink to="/welding-construction" close={() => setMenuOpen(false)}>Construction & Soudure</MobileLink>
               <MobileLink to="/computer" close={() => setMenuOpen(false)}>Solutions informatiques</MobileLink>
               <MobileLink to="/cctv" close={() => setMenuOpen(false)}>Gardiennage & CCTV</MobileLink>
             </div>
