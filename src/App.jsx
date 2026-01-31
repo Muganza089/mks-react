@@ -24,11 +24,11 @@ export default function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
-          <Route path="/a-propos" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/computer" element={<Informatique />} />
           <Route path="/cctv" element={<CCTV />} />
-          <Route path="/welding_construction" element={<Soudure />} />
+          <Route path="/welding-construction" element={<Soudure />} />
         </Routes>
       </main>
 

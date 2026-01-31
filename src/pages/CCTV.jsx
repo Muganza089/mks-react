@@ -61,7 +61,7 @@ export default function CCTV() {
       </section>
 
       {/* ================= GARDIENNAGE ================= */}
-      <section className="w-full bg-gray-50 py-24">
+      {/* <section className="w-full bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -93,7 +93,7 @@ export default function CCTV() {
 
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

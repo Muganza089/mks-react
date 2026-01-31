@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-
+import computerImg from "@assets/images/computer.png";
+import weldingImg from "@assets/images/constructor.jpg";
+import cctvImg from "@assets/images/shield.jpg";
+import videoCameraImg from "@assets/images/video-camera.jpg";
+import sproutImg from "@assets/images/sprout.jpg";
+import fashionImg from "@assets/images/fashion.jpg";
 export default function Services() {
   return (
     <section className="bg-primary/5 py-16">
@@ -24,7 +29,7 @@ export default function Services() {
           <Link to="/computer" className="group block">
             <ServiceCard
               title="Informatique & IT Support"
-              icon="/icons/computer.png"
+              icon={computerImg}
               text="Support informatique, maintenance, réseaux, solutions numériques
                     et accompagnement technologique pour entreprises et particuliers."
             />
@@ -34,7 +39,7 @@ export default function Services() {
           <Link to="/welding-construction" className="group block">
             <ServiceCard
               title="Soudure & Construction"
-              icon="/icons/constructor.png"
+              icon={weldingImg}
               text="Travaux de soudure professionnelle, construction métallique
                     et formation pratique en soudure pour élèves du secondaire."
             />
@@ -44,17 +49,17 @@ export default function Services() {
           <Link to="/cctv" className="group block">
             <ServiceCard
               title="Gardiennage & CCTV"
-              icon="/icons/shield.png"
+              icon={cctvImg}
               text="Sécurisation des biens et des personnes avec agents qualifiés
                     et installation de systèmes de caméras de surveillance modernes."
             />
           </Link>
 
           {/* SERVICE 4 */}
-          <Link to="/services/audiovisuel" className="group block">
+          <Link to="/" className="group block">
             <ServiceCard
               title="MKS Medias"
-              icon="/icons/video-camera.png"
+              icon={videoCameraImg}
               text="Captation vidéo, sonorisation, montage et couverture audiovisuelle
                     professionnelle pour événements et projets médias."
             />
@@ -64,7 +69,7 @@ export default function Services() {
           <Link to="/services/agropastoral" className="group block">
             <ServiceCard
               title="MKS Green"
-              icon="/icons/sprout.png"
+              icon={sproutImg}
               text="Agriculture et élevage orientés vers une production durable,
                     locale et adaptée aux réalités du terrain."
             />
@@ -74,7 +79,7 @@ export default function Services() {
           <Link to="/services/habillement" className="group block">
             <ServiceCard
               title="MKS Fashion"
-              icon="/icons/fashion.png"
+              icon={fashionImg}
               text="Vêtements professionnels, uniformes et équipements adaptés
                     aux exigences des métiers."
             />
@@ -115,5 +120,6 @@ function ServiceCard({ title, icon, text }) {
         </p>
       </div>
     </div>
+    
   );
 }

@@ -5,6 +5,7 @@ import videoIT from "@assets/videos/IT.mp4";
 import videoWelder from "@assets/videos/welder.mp4";
 import ImgConstruction from "@assets/images/construction.png";
 import ImgEngineer from "@assets/images/eng3.png";
+import Services from "@pages/Services";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -172,6 +173,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Services />
 
       {/* STYLES */}
       <style>

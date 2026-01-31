@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-
+import techImg from "@assets/images/tech.jpg";
+import engineerImg from "@assets/images/eng2.png";
+import expertiseImg from "@assets/images/expertise.jpg";
 export default function About() {
   return (
     <>
@@ -7,7 +9,7 @@ export default function About() {
       <section className="relative w-full h-[70vh] overflow-hidden">
 
         <img
-          src="/images/tech.jpg"
+          src={techImg}
           alt="Technologie et ingénierie"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -57,7 +59,7 @@ export default function About() {
 
             <div className="w-full h-[340px] overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/images/eng2.png"
+                src={engineerImg}
                 alt="Équipe MKS Engineering"
                 className="w-full h-full object-cover"
               />
@@ -82,7 +84,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="w-full h-[320px] overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/images/expertise.jpg"
+                src={expertiseImg}
                 alt="Expertise professionnelle"
                 className="w-full h-full object-cover"
               />
