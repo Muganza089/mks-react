@@ -6,7 +6,7 @@ import videoWelder from "@assets/videos/welder.mp4";
 import ImgConstruction from "@assets/images/construction.png";
 import ImgEngineer from "@assets/images/eng3.png";
 import Services from "@pages/Services";
-
+import Formation from "@pages/Formation";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -174,6 +174,7 @@ export default function Home() {
         </div>
       </section>
       <Services />
+      <Formation />
 
       {/* STYLES */}
       <style>
