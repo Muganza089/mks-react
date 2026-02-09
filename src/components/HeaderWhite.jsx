@@ -1,6 +1,7 @@
 import logo from "@assets/images/logo1.jpg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import phoneIcon from "@assets/icons/phone.png";
 import gmailIcon from "@assets/icons/gmail.png";
 import locationIcon from "@assets/icons/location.png";
@@ -38,20 +39,30 @@ export default function HeaderWhite() {
               <li className="relative h-full flex items-center group">
                 <span className="relative h-full flex items-center gap-1 px-4 text-gray-800 hover:text-primary cursor-pointer">
                   Services
-                  <svg className="w-4 h-4 transition-transform group-hover:rotate-180"
-                       fill="none" stroke="currentColor" strokeWidth="2"
-                       viewBox="0 0 24 24">
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round"
-                          d="M19 9l-7 7-7-7"/>
+                          d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
 
                 {/* DROPDOWN */}
                 <ul className="absolute left-0 top-full w-64 bg-white text-gray-800 shadow-xl border border-black/10
                                opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <DropdownLink to="/welding-construction">Construction & Soudure</DropdownLink>
-                  <DropdownLink to="/computer">Solutions informatiques</DropdownLink>
-                  <DropdownLink to="/cctv">Gardiennage & CCTV</DropdownLink>
+                  <DropdownLink to="/welding-construction">
+                    Construction & Soudure
+                  </DropdownLink>
+                  <DropdownLink to="/computer">
+                    Solutions informatiques
+                  </DropdownLink>
+                  <DropdownLink to="/cctv">
+                    Gardiennage & CCTV
+                  </DropdownLink>
                 </ul>
               </li>
 
@@ -66,18 +77,19 @@ export default function HeaderWhite() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden ml-auto p-2 text-primary hover:bg-gray-100 z-10"
+            aria-label="Menu mobile"
           >
             {!menuOpen ? (
               <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2"
                    viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"/>
+                      d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             ) : (
               <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2"
                    viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"/>
+                      d="M6 18L18 6M6 6l12 12" />
               </svg>
             )}
           </button>
@@ -97,28 +109,39 @@ export default function HeaderWhite() {
           transition-transform duration-300 flex flex-col justify-between
           ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
-
+        {/* MENU */}
         <div className="px-6 py-8 space-y-2 text-white font-semibold uppercase text-sm">
-          <MobileLink to="/" close={() => setMenuOpen(false)}>Home</MobileLink>
+          <MobileLink to="/" close={() => setMenuOpen(false)}>Accueil</MobileLink>
 
+          {/* SERVICES */}
           <button
             onClick={() => setServicesOpen(!servicesOpen)}
             className="w-full flex items-center justify-between py-2 hover:bg-white/10"
           >
             Services
-            <svg className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
-                 fill="none" stroke="currentColor" strokeWidth="2"
-                 viewBox="0 0 24 24">
+            <svg
+              className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"/>
+                    d="M19 9l-7 7-7-7" />
             </svg>
           </button>
 
           {servicesOpen && (
             <div className="ml-4 space-y-1 text-sm font-medium">
-              <MobileLink to="/welding-construction" close={() => setMenuOpen(false)}>Construction & Soudure</MobileLink>
-              <MobileLink to="/computer" close={() => setMenuOpen(false)}>Solutions informatiques</MobileLink>
-              <MobileLink to="/cctv" close={() => setMenuOpen(false)}>Gardiennage & CCTV</MobileLink>
+              <MobileLink to="/welding-construction" close={() => setMenuOpen(false)}>
+                Construction & Soudure
+              </MobileLink>
+              <MobileLink to="/computer" close={() => setMenuOpen(false)}>
+                Solutions informatiques
+              </MobileLink>
+              <MobileLink to="/cctv" close={() => setMenuOpen(false)}>
+                Gardiennage & CCTV
+              </MobileLink>
             </div>
           )}
 
@@ -126,14 +149,23 @@ export default function HeaderWhite() {
           <MobileLink to="/about" close={() => setMenuOpen(false)}>À propos</MobileLink>
         </div>
 
-        {/* CONTACTS BOTTOM */}
+        {/* CONTACTS */}
         <div className="px-6 py-6 border-t border-white/20 text-white text-sm space-y-3">
           <ContactItem icon={phoneIcon} text="+243 972 717 272" />
           <ContactItem icon={gmailIcon} text="support@mksengineering.net" />
-          <ContactItem icon={locationIcon}   text="Kolwezi – RDC" />
-          <div className="flex gap-4 pt-2">
-            <img src={facebookIcon} className="w-5 h-5 invert" />
-            <img src={tiktokIcon} className="w-5 h-5 invert" />
+          <ContactItem icon={locationIcon} text="Kolwezi – RDC" />
+
+          {/* SOCIALS */}
+          <div className="flex gap-4 pt-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+               className="hover:scale-110 transition">
+              <img src={facebookIcon} alt="Facebook" className="w-5 h-5 invert" />
+            </a>
+
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"
+               className="hover:scale-110 transition">
+              <img src={tiktokIcon} alt="TikTok" className="w-5 h-5 invert" />
+            </a>
           </div>
         </div>
       </aside>
@@ -141,7 +173,7 @@ export default function HeaderWhite() {
   );
 }
 
-/* ======= SMALL COMPONENTS ======= */
+/* ================= SMALL COMPONENTS ================= */
 
 const NavLink = ({ to, children }) => (
   <li className="h-full flex items-center">
@@ -166,8 +198,8 @@ const MobileLink = ({ to, children, close }) => (
 );
 
 const ContactItem = ({ icon, text }) => (
-  <div className="flex items-center gap-2">
-    <img src={`/icons/${icon}.png`} className="w-5 h-5 invert" />
+  <div className="flex items-center gap-3">
+    <img src={icon} alt="" className="w-5 h-5 invert" />
     <span>{text}</span>
   </div>
 );

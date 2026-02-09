@@ -66,7 +66,7 @@ export default function Services() {
           </Link>
 
           {/* SERVICE 5 */}
-          <Link to="/services/agropastoral" className="group block">
+          <Link to="/" className="group block">
             <ServiceCard
               title="MKS Green"
               icon={sproutImg}
@@ -76,7 +76,7 @@ export default function Services() {
           </Link>
 
           {/* SERVICE 6 */}
-          <Link to="/services/habillement" className="group block">
+          <Link to="/" className="group block">
             <ServiceCard
               title="MKS Fashion"
               icon={fashionImg}
