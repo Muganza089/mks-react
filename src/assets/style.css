@@ -41,8 +41,8 @@ body {
 
 /* Clic : prunelle grossit doucement */
 #cursor.boost .pupil {
-  width: 11px;
-  height: 11px;
+  width: 20px;
+  height: 20px;
 }
 
 /* ================= ORBITES ================= */
@@ -147,4 +147,87 @@ footer img {
 #backToTop.flex {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ================= IA LOADER ================= */
+#ai-loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #060918, #02030a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#ai-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Core */
+.neural-core {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+/* Pulse rings */
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(120, 180, 255, 0.4);
+  animation: pulseRing 2.4s ease-out infinite;
+}
+
+.pulse-ring.delay {
+  animation-delay: 1.2s;
+}
+
+/* Nodes */
+.node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffffff, hwb(213 38% 2%));
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(120, 180, 255, 0.9);
+  animation: nodeFloat 3s ease-in-out infinite;
+}
+
+.n1 { top: 10%; left: 50%; animation-delay: 0s; }
+.n2 { top: 35%; right: 10%; animation-delay: 0.6s; }
+.n3 { bottom: 15%; left: 55%; animation-delay: 1.2s; }
+.n4 { top: 40%; left: 10%; animation-delay: 1.8s; }
+.n5 { bottom: 35%; right: 25%; animation-delay: 2.4s; }
+
+/* Text */
+.ai-text {
+  position: absolute;
+  bottom: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: rgba(200, 220, 255, 0.75);
+  animation: glitch 2.2s infinite;
+}
+
+/* Animations */
+@keyframes pulseRing {
+  0% { transform: scale(0.7); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes nodeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes glitch {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
