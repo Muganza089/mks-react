@@ -28,9 +28,19 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-CHJE_5y7.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DIf6ri5d.css">
+    <script type="module" crossorigin src="/assets/index-Ji5k3-fZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DAnBiiwq.css">
   </head>
+  <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("ai-loader");
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 800);
+  });
+  </script>
+
+
 
   <body class="bg-background-light font-display">
     <!-- React monte ici -->
@@ -60,4 +70,22 @@
 
     <!-- Entry React -->
   </body>
+  <!-- ================= BOOT LOADER ================= -->
+  <!-- ================= IA LOADER ================= -->
+<div id="ai-loader">
+  <div class="neural-core">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring delay"></div>
+
+    <div class="node n1"></div>
+    <div class="node n2"></div>
+    <div class="node n3"></div>
+    <div class="node n4"></div>
+    <div class="node n5"></div>
+
+    <span class="ai-text">Chargement en cours...</span>
+  </div>
+</div>
+
+
 </html>
