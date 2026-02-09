@@ -11,12 +11,13 @@ import Contact from "@pages/Contacts";
 import Informatique from "@pages/Informatique";
 import CCTV from "@pages/CCTV";
 import Soudure from "@pages/Soudure";
-
-
+import Cursor from "@components/Cursor";
 
 export default function App() {
   return (
     <>
+      <Cursor />
+
       <HeaderBlue />
       <HeaderWhite />
 
@@ -36,3 +37,4 @@ export default function App() {
     </>
   );
 }
+
