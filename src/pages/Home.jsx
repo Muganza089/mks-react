@@ -10,6 +10,7 @@ import Formation from "@pages/Formations";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   useEffect(() => {
@@ -56,12 +57,14 @@ export default function Home() {
                   Soudure
                 </h2>
 
-                <a
-                  href="/welding-construction"
-                  className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg bg-primary text-white font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition"
-                >
-                  Voir plus
-                </a>
+                <Link
+                        to="/welding-construction"
+                        className="inline-block px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4
+                          bg-primary text-white font-bold uppercase tracking-wider
+                          hover:bg-white hover:text-primary transition"
+                        >
+                      Voir plus
+                  </Link>
               </div>
             </div>
 
@@ -78,12 +81,14 @@ export default function Home() {
                   Construction & Génie Civil
                 </h2>
 
-                <a
-                  href="/welding-construction"
-                  className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg bg-primary text-white font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition"
-                >
-                  Voir plus
-                </a>
+                 <Link
+                        to="/welding-construction"
+                        className="inline-block px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4
+                          bg-primary text-white font-bold uppercase tracking-wider
+                          hover:bg-white hover:text-primary transition"
+                        >
+                      Voir plus
+                  </Link>
               </div>
             </div>
 
@@ -104,12 +109,14 @@ export default function Home() {
                   Informatique & IT Support
                 </h2>
 
-                <a
-                  href="/computer"
-                  className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg bg-primary text-white font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition"
-                >
-                  Voir plus
-                </a>
+                  <Link
+                        to="/computer"
+                        className="inline-block px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4
+                          bg-primary text-white font-bold uppercase tracking-wider
+                          hover:bg-white hover:text-primary transition"
+                        >
+                      Voir plus
+                  </Link>
               </div>
             </div>
           </div>

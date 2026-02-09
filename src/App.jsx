@@ -12,12 +12,12 @@ import Informatique from "@pages/Informatique";
 import CCTV from "@pages/CCTV";
 import Soudure from "@pages/Soudure";
 import Cursor from "@components/Cursor";
-
+import ScrollToTop from "@components/ScrollToTop";
 export default function App() {
   return (
     <>
       <Cursor />
-
+      <ScrollToTop />
       <HeaderBlue />
       <HeaderWhite />
 
